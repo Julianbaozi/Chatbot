@@ -1,0 +1,404 @@
+CUDA is supported
+Training Average minibatch 1000 loss: 39.120
+Training Average minibatch 2000 loss: 39.703
+Training Average minibatch 3000 loss: 39.620
+Training Average minibatch 4000 loss: 38.891
+Training Average minibatch 5000 loss: 39.622
+Validating/Testing Average minibatch 1000 loss: 75.495
+Epoch 1,training loss: 39.020, validation loss:75.487, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 39.594
+Training Average minibatch 2000 loss: 40.952
+Training Average minibatch 3000 loss: 37.487
+Training Average minibatch 4000 loss: 36.711
+Training Average minibatch 5000 loss: 38.745
+Validating/Testing Average minibatch 1000 loss: 75.130
+Epoch 2,training loss: 38.607, validation loss:75.034, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 37.583
+Training Average minibatch 2000 loss: 40.021
+Training Average minibatch 3000 loss: 39.206
+Training Average minibatch 4000 loss: 37.722
+Training Average minibatch 5000 loss: 40.164
+Validating/Testing Average minibatch 1000 loss: 75.184
+Epoch 3,training loss: 38.811, validation loss:75.000, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 38.250
+Training Average minibatch 2000 loss: 39.425
+Training Average minibatch 3000 loss: 36.949
+Training Average minibatch 4000 loss: 39.953
+Training Average minibatch 5000 loss: 39.019
+Validating/Testing Average minibatch 1000 loss: 75.371
+Epoch 4,training loss: 38.393, validation loss:75.282, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 36.073
+Training Average minibatch 2000 loss: 37.801
+Training Average minibatch 3000 loss: 38.907
+Training Average minibatch 4000 loss: 38.248
+Training Average minibatch 5000 loss: 38.740
+Validating/Testing Average minibatch 1000 loss: 75.880
+Epoch 5,training loss: 37.418, validation loss:75.692, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 36.549
+Training Average minibatch 2000 loss: 38.160
+Training Average minibatch 3000 loss: 35.561
+Training Average minibatch 4000 loss: 37.613
+Training Average minibatch 5000 loss: 39.425
+Validating/Testing Average minibatch 1000 loss: 76.123
+Epoch 6,training loss: 37.751, validation loss:76.037, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 35.882
+Training Average minibatch 2000 loss: 37.542
+Training Average minibatch 3000 loss: 36.331
+Training Average minibatch 4000 loss: 36.729
+Training Average minibatch 5000 loss: 37.302
+Validating/Testing Average minibatch 1000 loss: 76.356
+Epoch 7,training loss: 36.757, validation loss:76.502, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 36.135
+Training Average minibatch 2000 loss: 36.088
+Training Average minibatch 3000 loss: 37.032
+Training Average minibatch 4000 loss: 35.872
+Training Average minibatch 5000 loss: 36.255
+Validating/Testing Average minibatch 1000 loss: 76.869
+Epoch 8,training loss: 36.509, validation loss:76.940, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 38.669
+Training Average minibatch 2000 loss: 35.136
+Training Average minibatch 3000 loss: 36.472
+Training Average minibatch 4000 loss: 36.100
+Training Average minibatch 5000 loss: 36.032
+Validating/Testing Average minibatch 1000 loss: 77.615
+Epoch 9,training loss: 36.410, validation loss:77.523, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 35.536
+Training Average minibatch 2000 loss: 35.697
+Training Average minibatch 3000 loss: 35.155
+Training Average minibatch 4000 loss: 35.953
+Training Average minibatch 5000 loss: 35.140
+Validating/Testing Average minibatch 1000 loss: 77.736
+Epoch 10,training loss: 35.426, validation loss:77.715, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 34.729
+Training Average minibatch 2000 loss: 35.906
+Training Average minibatch 3000 loss: 34.657
+Training Average minibatch 4000 loss: 36.016
+Training Average minibatch 5000 loss: 35.353
+Validating/Testing Average minibatch 1000 loss: 78.136
+Epoch 11,training loss: 35.467, validation loss:78.183, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 35.036
+Training Average minibatch 2000 loss: 34.470
+Training Average minibatch 3000 loss: 34.876
+Training Average minibatch 4000 loss: 34.124
+Training Average minibatch 5000 loss: 36.013
+Validating/Testing Average minibatch 1000 loss: 78.570
+Epoch 12,training loss: 35.132, validation loss:78.536, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 35.725
+Training Average minibatch 2000 loss: 33.009
+Training Average minibatch 3000 loss: 35.238
+Training Average minibatch 4000 loss: 34.891
+Training Average minibatch 5000 loss: 34.587
+Validating/Testing Average minibatch 1000 loss: 79.364
+Epoch 13,training loss: 34.890, validation loss:79.309, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 34.246
+Training Average minibatch 2000 loss: 36.578
+Training Average minibatch 3000 loss: 34.028
+Training Average minibatch 4000 loss: 35.889
+Training Average minibatch 5000 loss: 34.411
+Validating/Testing Average minibatch 1000 loss: 79.715
+Epoch 14,training loss: 34.992, validation loss:79.653, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 32.723
+Training Average minibatch 2000 loss: 34.172
+Training Average minibatch 3000 loss: 33.764
+Training Average minibatch 4000 loss: 33.744
+Training Average minibatch 5000 loss: 34.950
+Validating/Testing Average minibatch 1000 loss: 80.364
+Epoch 15,training loss: 34.040, validation loss:80.200, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 32.643
+Training Average minibatch 2000 loss: 33.037
+Training Average minibatch 3000 loss: 34.096
+Training Average minibatch 4000 loss: 34.328
+Training Average minibatch 5000 loss: 35.779
+Validating/Testing Average minibatch 1000 loss: 81.055
+Epoch 16,training loss: 34.004, validation loss:80.984, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 34.960
+Training Average minibatch 2000 loss: 33.294
+Training Average minibatch 3000 loss: 33.125
+Training Average minibatch 4000 loss: 33.944
+Training Average minibatch 5000 loss: 33.446
+Validating/Testing Average minibatch 1000 loss: 81.364
+Epoch 17,training loss: 33.980, validation loss:81.364, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 33.004
+Training Average minibatch 2000 loss: 31.934
+Training Average minibatch 3000 loss: 33.606
+Training Average minibatch 4000 loss: 32.121
+Training Average minibatch 5000 loss: 32.887
+Validating/Testing Average minibatch 1000 loss: 81.818
+Epoch 18,training loss: 32.771, validation loss:81.845, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 31.463
+Training Average minibatch 2000 loss: 33.889
+Training Average minibatch 3000 loss: 34.287
+Training Average minibatch 4000 loss: 32.515
+Training Average minibatch 5000 loss: 33.336
+Validating/Testing Average minibatch 1000 loss: 83.588
+Epoch 19,training loss: 33.383, validation loss:83.415, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 32.816
+Training Average minibatch 2000 loss: 34.353
+Training Average minibatch 3000 loss: 32.180
+Training Average minibatch 4000 loss: 30.557
+Training Average minibatch 5000 loss: 33.805
+Validating/Testing Average minibatch 1000 loss: 82.532
+Epoch 20,training loss: 32.760, validation loss:82.476, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 32.114
+Training Average minibatch 2000 loss: 32.333
+Training Average minibatch 3000 loss: 32.815
+Training Average minibatch 4000 loss: 32.585
+Training Average minibatch 5000 loss: 34.179
+Validating/Testing Average minibatch 1000 loss: 83.487
+Epoch 21,training loss: 32.769, validation loss:83.299, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 32.612
+Training Average minibatch 2000 loss: 31.747
+Training Average minibatch 3000 loss: 32.960
+Training Average minibatch 4000 loss: 32.938
+Training Average minibatch 5000 loss: 31.843
+Validating/Testing Average minibatch 1000 loss: 83.318
+Epoch 22,training loss: 32.342, validation loss:83.448, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 31.027
+Training Average minibatch 2000 loss: 31.517
+Training Average minibatch 3000 loss: 30.852
+Training Average minibatch 4000 loss: 31.681
+Training Average minibatch 5000 loss: 33.504
+Validating/Testing Average minibatch 1000 loss: 84.041
+Epoch 23,training loss: 31.702, validation loss:84.243, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 31.381
+Training Average minibatch 2000 loss: 33.166
+Training Average minibatch 3000 loss: 33.927
+Training Average minibatch 4000 loss: 30.594
+Training Average minibatch 5000 loss: 34.421
+Validating/Testing Average minibatch 1000 loss: 84.578
+Epoch 24,training loss: 32.566, validation loss:84.553, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 30.101
+Training Average minibatch 2000 loss: 32.282
+Training Average minibatch 3000 loss: 32.862
+Training Average minibatch 4000 loss: 32.288
+Training Average minibatch 5000 loss: 29.935
+Validating/Testing Average minibatch 1000 loss: 85.121
+Epoch 25,training loss: 31.548, validation loss:85.062, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 30.740
+Training Average minibatch 2000 loss: 30.676
+Training Average minibatch 3000 loss: 31.748
+Training Average minibatch 4000 loss: 31.713
+Training Average minibatch 5000 loss: 32.483
+Validating/Testing Average minibatch 1000 loss: 85.704
+Epoch 26,training loss: 31.679, validation loss:85.699, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 30.246
+Training Average minibatch 2000 loss: 31.866
+Training Average minibatch 3000 loss: 30.992
+Training Average minibatch 4000 loss: 31.645
+Training Average minibatch 5000 loss: 31.444
+Validating/Testing Average minibatch 1000 loss: 86.020
+Epoch 27,training loss: 31.603, validation loss:85.992, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 31.569
+Training Average minibatch 2000 loss: 30.565
+Training Average minibatch 3000 loss: 30.031
+Training Average minibatch 4000 loss: 32.347
+Training Average minibatch 5000 loss: 30.843
+Validating/Testing Average minibatch 1000 loss: 86.593
+Epoch 28,training loss: 31.354, validation loss:86.578, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 30.229
+Training Average minibatch 2000 loss: 30.262
+Training Average minibatch 3000 loss: 33.031
+Training Average minibatch 4000 loss: 32.218
+Training Average minibatch 5000 loss: 31.215
+Validating/Testing Average minibatch 1000 loss: 86.824
+Epoch 29,training loss: 31.409, validation loss:86.872, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 29.573
+Training Average minibatch 2000 loss: 31.001
+Training Average minibatch 3000 loss: 30.335
+Training Average minibatch 4000 loss: 30.743
+Training Average minibatch 5000 loss: 30.949
+Validating/Testing Average minibatch 1000 loss: 86.529
+Epoch 30,training loss: 30.804, validation loss:86.474, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 31.491
+Training Average minibatch 2000 loss: 30.267
+Training Average minibatch 3000 loss: 32.001
+Training Average minibatch 4000 loss: 30.895
+Training Average minibatch 5000 loss: 31.014
+Validating/Testing Average minibatch 1000 loss: 87.089
+Epoch 31,training loss: 30.978, validation loss:87.207, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 29.709
+Training Average minibatch 2000 loss: 28.690
+Training Average minibatch 3000 loss: 30.322
+Training Average minibatch 4000 loss: 31.723
+Training Average minibatch 5000 loss: 31.349
+Validating/Testing Average minibatch 1000 loss: 86.949
+Epoch 32,training loss: 30.674, validation loss:86.947, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 30.306
+Training Average minibatch 2000 loss: 29.806
+Training Average minibatch 3000 loss: 29.612
+Training Average minibatch 4000 loss: 30.179
+Training Average minibatch 5000 loss: 29.170
+Validating/Testing Average minibatch 1000 loss: 87.722
+Epoch 33,training loss: 30.087, validation loss:87.681, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 28.953
+Training Average minibatch 2000 loss: 30.496
+Training Average minibatch 3000 loss: 29.445
+Training Average minibatch 4000 loss: 29.927
+Training Average minibatch 5000 loss: 30.925
+Validating/Testing Average minibatch 1000 loss: 88.276
+Epoch 34,training loss: 29.942, validation loss:88.365, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 29.021
+Training Average minibatch 2000 loss: 30.221
+Training Average minibatch 3000 loss: 31.678
+Training Average minibatch 4000 loss: 29.903
+Training Average minibatch 5000 loss: 30.092
+Validating/Testing Average minibatch 1000 loss: 88.319
+Epoch 35,training loss: 30.302, validation loss:88.348, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 29.290
+Training Average minibatch 2000 loss: 29.887
+Training Average minibatch 3000 loss: 30.243
+Training Average minibatch 4000 loss: 31.397
+Training Average minibatch 5000 loss: 33.673
+Validating/Testing Average minibatch 1000 loss: 89.033
+Epoch 36,training loss: 31.011, validation loss:88.884, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 30.957
+Training Average minibatch 2000 loss: 30.133
+Training Average minibatch 3000 loss: 29.989
+Training Average minibatch 4000 loss: 31.271
+Training Average minibatch 5000 loss: 32.117
+Validating/Testing Average minibatch 1000 loss: 89.663
+Epoch 37,training loss: 30.802, validation loss:89.801, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 28.982
+Training Average minibatch 2000 loss: 29.342
+Training Average minibatch 3000 loss: 28.779
+Training Average minibatch 4000 loss: 31.783
+Training Average minibatch 5000 loss: 30.081
+Validating/Testing Average minibatch 1000 loss: 89.480
+Epoch 38,training loss: 29.628, validation loss:89.314, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 30.322
+Training Average minibatch 2000 loss: 28.189
+Training Average minibatch 3000 loss: 30.694
+Training Average minibatch 4000 loss: 30.200
+Training Average minibatch 5000 loss: 31.654
+Validating/Testing Average minibatch 1000 loss: 89.389
+Epoch 39,training loss: 30.468, validation loss:89.403, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 28.960
+Training Average minibatch 2000 loss: 29.478
+Training Average minibatch 3000 loss: 30.875
+Training Average minibatch 4000 loss: 30.253
+Training Average minibatch 5000 loss: 31.283
+Validating/Testing Average minibatch 1000 loss: 90.470
+Epoch 40,training loss: 30.163, validation loss:90.299, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 30.430
+Training Average minibatch 2000 loss: 31.440
+Training Average minibatch 3000 loss: 29.984
+Training Average minibatch 4000 loss: 29.503
+Training Average minibatch 5000 loss: 28.303
+Validating/Testing Average minibatch 1000 loss: 90.846
+Epoch 41,training loss: 30.351, validation loss:90.987, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 29.600
+Training Average minibatch 2000 loss: 31.067
+Training Average minibatch 3000 loss: 29.987
+Training Average minibatch 4000 loss: 28.212
+Training Average minibatch 5000 loss: 29.751
+Validating/Testing Average minibatch 1000 loss: 90.518
+Epoch 42,training loss: 29.828, validation loss:90.671, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 30.686
+Training Average minibatch 2000 loss: 29.051
+Training Average minibatch 3000 loss: 30.108
+Training Average minibatch 4000 loss: 29.654
+Training Average minibatch 5000 loss: 28.989
+Validating/Testing Average minibatch 1000 loss: 90.633
+Epoch 43,training loss: 30.086, validation loss:90.793, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 28.495
+Training Average minibatch 2000 loss: 31.180
+Training Average minibatch 3000 loss: 30.445
+Training Average minibatch 4000 loss: 29.554
+Training Average minibatch 5000 loss: 29.954
+Validating/Testing Average minibatch 1000 loss: 91.509
+Epoch 44,training loss: 30.113, validation loss:91.477, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 29.197
+Training Average minibatch 2000 loss: 30.086
+Training Average minibatch 3000 loss: 29.097
+Training Average minibatch 4000 loss: 30.289
+Training Average minibatch 5000 loss: 29.295
+Validating/Testing Average minibatch 1000 loss: 91.371
+Epoch 45,training loss: 29.639, validation loss:91.366, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 30.302
+Training Average minibatch 2000 loss: 29.873
+Training Average minibatch 3000 loss: 31.634
+Training Average minibatch 4000 loss: 29.990
+Training Average minibatch 5000 loss: 29.231
+Validating/Testing Average minibatch 1000 loss: 91.650
+Epoch 46,training loss: 30.232, validation loss:91.679, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 29.069
+Training Average minibatch 2000 loss: 28.658
+Training Average minibatch 3000 loss: 28.890
+Training Average minibatch 4000 loss: 29.036
+Training Average minibatch 5000 loss: 29.737
+Validating/Testing Average minibatch 1000 loss: 91.219
+Epoch 47,training loss: 29.256, validation loss:91.401, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 28.963
+Training Average minibatch 2000 loss: 29.986
+Training Average minibatch 3000 loss: 29.926
+Training Average minibatch 4000 loss: 29.264
+Training Average minibatch 5000 loss: 30.532
+Validating/Testing Average minibatch 1000 loss: 91.925
+Epoch 48,training loss: 29.410, validation loss:91.775, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 29.804
+Training Average minibatch 2000 loss: 28.055
+Training Average minibatch 3000 loss: 29.574
+Training Average minibatch 4000 loss: 29.718
+Training Average minibatch 5000 loss: 30.556
+Validating/Testing Average minibatch 1000 loss: 92.305
+Epoch 49,training loss: 29.453, validation loss:92.361, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 28.766
+Training Average minibatch 2000 loss: 27.815
+Training Average minibatch 3000 loss: 28.543
+Training Average minibatch 4000 loss: 29.378
+Training Average minibatch 5000 loss: 29.459
+Validating/Testing Average minibatch 1000 loss: 92.374
+Epoch 50,training loss: 29.164, validation loss:92.355, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 29.293
+Training Average minibatch 2000 loss: 28.925
+Training Average minibatch 3000 loss: 28.346
+Training Average minibatch 4000 loss: 29.045
+Training Average minibatch 5000 loss: 28.356
+Validating/Testing Average minibatch 1000 loss: 93.202
+Epoch 51,training loss: 29.013, validation loss:93.075, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 28.152
+Training Average minibatch 2000 loss: 29.790
+Training Average minibatch 3000 loss: 27.789
+Training Average minibatch 4000 loss: 28.422
+Training Average minibatch 5000 loss: 29.344
+Validating/Testing Average minibatch 1000 loss: 93.168
+Epoch 52,training loss: 28.956, validation loss:93.264, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 29.225
+Training Average minibatch 2000 loss: 29.018
+Training Average minibatch 3000 loss: 29.519
+Training Average minibatch 4000 loss: 30.060
+Training Average minibatch 5000 loss: 28.414
+Validating/Testing Average minibatch 1000 loss: 93.176
+Epoch 53,training loss: 29.355, validation loss:93.107, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 28.621
+Training Average minibatch 2000 loss: 28.098
+Training Average minibatch 3000 loss: 28.347
+Training Average minibatch 4000 loss: 29.997
+Training Average minibatch 5000 loss: 29.256
+Validating/Testing Average minibatch 1000 loss: 93.250
+Epoch 54,training loss: 28.981, validation loss:93.251, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 30.175
+Training Average minibatch 2000 loss: 27.569
+Training Average minibatch 3000 loss: 28.013
+Training Average minibatch 4000 loss: 29.331
+Training Average minibatch 5000 loss: 29.007
+Validating/Testing Average minibatch 1000 loss: 93.700
+Epoch 55,training loss: 28.769, validation loss:93.617, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 27.916
+Training Average minibatch 2000 loss: 28.071
+Training Average minibatch 3000 loss: 30.197
+Training Average minibatch 4000 loss: 28.857
+Training Average minibatch 5000 loss: 28.062
+Validating/Testing Average minibatch 1000 loss: 93.995
+Epoch 56,training loss: 28.710, validation loss:93.971, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 29.156
+Training Average minibatch 2000 loss: 27.612
+Training Average minibatch 3000 loss: 29.991
+Training Average minibatch 4000 loss: 28.793
+Training Average minibatch 5000 loss: 28.401
+Validating/Testing Average minibatch 1000 loss: 93.652
+Epoch 57,training loss: 29.092, validation loss:93.752, BLEU score is:0.000 
+Training Average minibatch 1000 loss: 28.162
+Training Average minibatch 2000 loss: 28.993
+Training Average minibatch 3000 loss: 28.740
+Training Average minibatch 4000 loss: 29.174
