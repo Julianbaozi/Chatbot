@@ -10,7 +10,6 @@ def split_dataset(x, y, ratio = [0.7, 0.15, 0.15] ):
     # number of examples
     data_len = len(x)
     lens = [ int(data_len*item) for item in ratio ]
-
     trainX, trainY = x[:lens[0]], y[:lens[0]]
     testX, testY = x[lens[0]:lens[0]+lens[1]], y[lens[0]:lens[0]+lens[1]]
     validX, validY = x[-lens[-1]:], y[-lens[-1]:]
@@ -25,12 +24,12 @@ def split_dataset(x, y, ratio = [0.7, 0.15, 0.15] ):
     TODO : fix needed
 
 '''
-def batch_generator(data,target,batch_size):
-    idx = np.arange(len(data))
-    np.random.shuffle(idx)
-    data = data[idx]
-    target = target[idx]
-    
+def batch_generator(data,target,batch_size,shuffle = True):
+    if shuffle:
+        idx = np.arange(len(data))
+        np.random.shuffle(idx)
+        data = data[idx]
+        target = target[idx]
     base = 0
     offset = batch_size
     maximum = len(data)
@@ -40,11 +39,27 @@ def batch_generator(data,target,batch_size):
             #yild data and target(left shift by 1)
             features = data[base:base+offset]
             labels = target[base:base+offset]
-            yield features,labels
+            features_len,lables = sort_batch(features,labels)
+            yield features_len,labels
             base += offset
 #         else:
 #             yield data[base:],target[base:]
-            
+def sort_batch(batch,labels):
+    batch_size = batch.shape[0]
+    mask = np.zeros_like(batch)
+    mask[batch!=0] = 1
+    lengths = np.sum(mask,axis =1)
+    idx = np.arange(batch_size)
+    idx_len = dict(zip(idx,lengths))
+    idx_len = sorted(idx_len.items() ,key = lambda x:x[1],reverse = True)
+    idx = [x for x,_ in idx_len]
+    batch = batch[idx]
+    labels = labels[idx]
+    lengths = lengths[idx]
+    return(batch,lengths),labels
+    
+    
+    
 def batch_gen(x, y, batch_size):
     # infinite while
     while True:
