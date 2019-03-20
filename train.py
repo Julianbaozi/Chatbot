@@ -25,7 +25,7 @@ config['decoder_lr']= 0.0005
 config['learning rate'] = 0.0001
 config['max_len'] = 20
 config['bidirectional']  = True
-config['attn'] = False
+config['attn'] = True
 config['attn_model'] = 'concat'
 config['model_dir']= 'save/'
 config['beam_width'] =3
@@ -248,8 +248,7 @@ def run_epoch(encoder,decoder,feature,labels,training = False,encoder_optimizer=
     
     data_loader = data_utils.batch_generator(feature,labels,batch_size = config['batch_size'])
     for minibatch_count, (data_len,labels) in enumerate(data_loader):
-#         if minibatch_count>5:
-#             break
+      
         if training:
             encoder_optimizer.zero_grad()
             decoder_optimizer.zero_grad()
@@ -261,6 +260,7 @@ def run_epoch(encoder,decoder,feature,labels,training = False,encoder_optimizer=
         
 #         print(encoder_hidden.shape)
 #         assert 0==1
+       
         decoder_hidden = encoder_hidden
         max_target_len = config['max_len']
         loss = 0
@@ -406,14 +406,17 @@ def evaluate_test(encoder,decoder):
 #             loss /= lengths.float().me[[SOS_token for _ in range(batch_size)]]).to(computing_device).transpose(0,1)
     decoder_charid[:,0] = decoder_input.reshape(-1)
     target = labels[:,1:]
+    
     decode_batch= beam_decode(target,decoder_hidden,decoder,encoder_outputs)
 #     print(decode_batch.shape)
-    decoder_chatid = torch.tensor(decode_batch)
-    for t in range(max_target_len-1):
-        decoder_output, decoder_hidden = decoder(decoder_input, decoder_hidden, encoder_outputs)
-        output_id = torch.argmax(decoder_output.detach(),dim=2)
-        decoder_charid[:,t+1] = output_id.squeeze()
-        decoder_input = output_id
+   
+    decoder_charid = torch.tensor(decode_batch).squeeze()
+#     print(decoder_charid.shape)
+#     for t in range(max_target_len-1):
+#         decoder_output, decoder_hidden = decoder(decoder_input, decoder_hidden, encoder_outputs)
+#         output_id = torch.argmax(decoder_output.detach(),dim=2)
+#         decoder_charid[:,t+1] = output_id.squeeze()
+#         decoder_input = output_id
         
     data,decoder_charid,labels=data.cpu().numpy().tolist(),decoder_charid.cpu().numpy().tolist(),labels.cpu().numpy().tolist()
     ori_input = []
@@ -433,8 +436,8 @@ def evaluate_test(encoder,decoder):
     filename  = 'log/'+modelname+'result.txt'
     with open(filename,'a') as f:
         for i,sentence in enumerate(model_output):
-#             print("Input:"+ ori_input[i]+ '\n'+ 'Chatbot:'+ sentence +'\n \n')
-            f.write("Input:"+ ori_input[i]+ '\n'+ 'Chatbot:'+ sentence +'\n \n')
+            print("Input:"+ ori_input[i]+ '\n'+ 'Chatbot:'+ sentence +'\n \n')
+#             f.write("Input:"+ ori_input[i]+ '\n'+ 'Chatbot:'+ sentence +'\n \n')
             
 class BeamSearchNode(object):
     def __init__(self, hiddenstate, previousNode, wordId, logProb, length):
@@ -486,7 +489,9 @@ def beamsearchdecode():
         decoder_charid[:,t+1] = output_id.squeeze()
         decoder_input = output_idevaluate_test(encoder,decoder)
         
-def beam_decode(target_tensor, decoder_hiddens,decoder, encoder_outputs=None):
+
+
+def beam_decode(target_tensor, decoder_hiddens, decoder,encoder_outputs=None):
     '''
     :param target_tensor: target indexes tensor of shape [B, T] where B is the batch size and T is the maximum length of the output sentence
     :param decoder_hidden: input tensor of shape [1, B, H] for start of the decoding
@@ -494,20 +499,22 @@ def beam_decode(target_tensor, decoder_hiddens,decoder, encoder_outputs=None):
     :return: decoded_batch
     '''
 
-    beam_width = 3
+    beam_width = 10
     topk = 1  # how many sentence do you want to generate
     decoded_batch = []
 
     # decoding goes sentence by sentence
+#     print(decoder_hiddens.shape)
     for idx in range(target_tensor.size(0)):
         if isinstance(decoder_hiddens, tuple):  # LSTM case
             decoder_hidden = (decoder_hiddens[0][:,idx, :].unsqueeze(0),decoder_hiddens[1][:,idx, :].unsqueeze(0))
         else:
-            decoder_hidden = decoder_hiddens[:,idx, :].unsqueeze(1).contiguous()
-        encoder_output = encoder_outputs[idx,:,:].unsqueeze(1)
+            decoder_hidden = decoder_hiddens[:,idx,:].unsqueeze(1).contiguous()
+        encoder_output = encoder_outputs[idx,:, :].unsqueeze(0)
 
         # Start with the start of the sentence token
         decoder_input = torch.LongTensor([[SOS_token]]).to(computing_device)
+
         # Number of sentence to generate
         endnodes = []
         number_required = min((topk + 1), topk - len(endnodes))
@@ -523,15 +530,13 @@ def beam_decode(target_tensor, decoder_hiddens,decoder, encoder_outputs=None):
         # start beam search
         while True:
             # give up when decoding takes too long
-#             decoder_input = torch.LongTensor([[SOS_token for _ in range(batch_size)]]).to(computi
-            if qsize > 220: 
-                break
+            if qsize > 300: break
 
             # fetch the best node
             score, n = nodes.get()
             decoder_input = n.wordid
             decoder_hidden = n.h
-#             print(decoder_input.shape)
+
             if n.wordid.item() == EOS_token and n.prevNode != None:
                 endnodes.append((score, n))
                 # if we reached maximum # of sentences required
@@ -545,12 +550,11 @@ def beam_decode(target_tensor, decoder_hiddens,decoder, encoder_outputs=None):
 
             # PUT HERE REAL BEAM SEARCH OF TOP
             log_prob, indexes = torch.topk(decoder_output, beam_width)
+            log_prob, indexes = log_prob.squeeze(),indexes.squeeze()
             nextnodes = []
-#             print(log_prob.shape,indexes.shape)
-            log_prob,indexes = log_prob.squeeze(),indexes.squeeze()
+
             for new_k in range(beam_width):
                 decoded_t = indexes[new_k].view(1, -1)
-#                 print(log_prob[0][new_k].shape)
                 log_p = log_prob[new_k].item()
 
                 node = BeamSearchNode(decoder_hidden, n, decoded_t, n.logp + log_p, n.leng + 1)
@@ -560,7 +564,6 @@ def beam_decode(target_tensor, decoder_hiddens,decoder, encoder_outputs=None):
             # put them into queue
             for i in range(len(nextnodes)):
                 score, nn = nextnodes[i]
-                
                 nodes.put((score, nn))
                 # increase qsize
             qsize += len(nextnodes) - 1
@@ -572,21 +575,27 @@ def beam_decode(target_tensor, decoder_hiddens,decoder, encoder_outputs=None):
         utterances = []
         for score, n in sorted(endnodes, key=operator.itemgetter(0)):
             utterance = []
-            utterance.append(n.wordid.item())
+            utterance.append(n.wordid)
             # back trace
             while n.prevNode != None:
                 n = n.prevNode
-                utterance.append(n.wordid.item())
-
-            utterance = utterance[::-1]
-#             print(len(utterance))
-#             print(target_tensor.shape)
-            utterance = utterance[:target_tensor.shape[1]]
-            utterances.append(utterance)
-        decoded_batch.append(utterances)
+                utterance.append(n.wordid)
         
+            utterance = utterance[::-1]
+            length = target_tensor.shape[1]
+            if len(utterance)>length:
+                utterance = utterance[:length]
+            else:
+                utterance += [0]* (length-len(utterance))
+                
+#             print(len(utterance))
+            
+            utterances.append(utterance)
+#         print(len(utterances))    
+        
+        decoded_batch.append(utterances)
+#     print(target_tensor.shape)
     return decoded_batch
-    
     
 if __name__ == "__main__":
     train()
